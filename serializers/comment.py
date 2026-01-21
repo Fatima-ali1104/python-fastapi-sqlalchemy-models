@@ -8,3 +8,16 @@ class CommentSchema(BaseModel):
 
   class Config:
     orm_mode = True
+
+class CommentCreateSchema(BaseModel):
+  id: int
+  content:str
+
+  class Config:
+    orm_mode = True
+
+class CommentUpdateSchema(BaseModel):
+  content: str
+
+  class Config:
+    orm_mode = True    
